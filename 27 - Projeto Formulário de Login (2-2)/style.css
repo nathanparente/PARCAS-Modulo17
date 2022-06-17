@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    min-height: 100vh;
+}
+
+.area {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    padding: 10px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+h3 {
+    margin-block: 20px;
+}
+
+input[type=email]{
+    margin-block: 10px;
+}
+
+.remember {
+    margin-right: 10px;
+    padding-block: 20px;
+}
+
+.gray {
+    color: #999;
+}
+
+.padding {
+    padding: 20px;
+}

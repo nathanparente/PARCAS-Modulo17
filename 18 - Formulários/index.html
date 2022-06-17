@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no "/> 
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"/>
+        <title>Projeto Bootstrap4</title>
+        <style>
+            #area, #area2, #area3, #area4 {
+                border: 2px solid #ff0000;
+                background-color: #eee;
+                padding: 20px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="container">
+
+            <h3>Sem o Bootstrap</h3>
+            <form method="POST">
+                Email:</br></br>
+                <input type="email" name="email"/></br></br>
+                Senha:</br></br>
+                <input type="password" name="senha"/></br></br>
+                <input type="submit" value="Entrar"/>
+            </form>
+            </br>
+            <hr/>
+            <h3>Com o Bootstrap</h3>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input id="email" type="email" name="email" class="form-control" placeholder="E-mail"/>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input id="senha" type="password" name="senha" class="form-control" placeholder="Senha"/>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Entrar" class="btn btn-primary"/>
+                </div>
+            </form>
+            </br>
+            <hr/>
+            <h3>Com o Bootstrap form-inline</h3>
+            <form method="POST" class="form-inline">
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="E-mail"/>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="senha" class="form-control" placeholder="Senha"/>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Entrar" class="btn btn-primary"/>
+                </div>
+            </form>
+            </br>
+            <hr/>
+            <h3>Com o Bootstrap linhas e colunas</h3>
+            <form method="POST">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="E-mail"/>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <input type="password" name="senha" class="form-control" placeholder="Senha"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <input type="submit" value="Entrar" class="btn btn-primary"/>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.btnCustom {
+    font-size: 2rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.modal {
+    position: fixed;
+    top: ''!important;
+    bottom: ''!important;
+    right: 0 !important;
+    left: 0 !important;
+}
+
+.selected {
+    background-color: #ccc;
+}

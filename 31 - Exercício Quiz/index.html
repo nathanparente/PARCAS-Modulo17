@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <title>Quiz Game</title>
+</head>
+<body class="d-flex align-items-center">
+<!-- START GAME QUIZ =============================================================================================== -->
+    <div class="container d-flex justify-content-center">
+        <div id="playButton" class="btnCustom btn-primary" data-toggle="modal" data-target="#window">Start Quiz</div>
+    </div>
+<!-- PRIMEIRA JANELA =============================================================================================== -->
+    <div class="modal fade" id="window">
+        <div id="modal1" class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Planetas do Sistema Solar</h5>
+                    <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <p>Responda ao quiz e teste seus conhecimentos sobre os planetas do nosso Sistema Solar!</p>
+                            <img class="w-100 img-fluid" src="assets/images/planetas.jpg" alt="planetas"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <div></div>
+                    <div data-dismiss="modal" data-toggle="modal" data-target="#window2" class="btn btn-primary">Next</div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- SEGUNDA JANELA =============================================================================================== -->
+    <div class="modal fade" id="window2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pergunta 1: Quais são os planetas externos do nosso sistema solar? </h5>
+                    <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col">
+                        <form class="form-check">
+                            <label class="row align-items-center form-check-label" for="inlineRadio1">
+                                <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1"/>
+                                Netuno, Urano, Plutão e Éris
+                            </label>
+                            <label class="row align-items-center form-check-label" for="inlineRadio2">
+                                <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio2" value="option2"/>
+                                Júpiter e Saturno
+                            </label>
+                            <label class="row align-items-center form-check-label" for="inlineRadio3">
+                                <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio3" value="option3"/>
+                                Júpiter, Saturno, Urano e Netuno
+                            </label>
+                            <label class="row align-items-center form-check-label" for="inlineRadio4">
+                                <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio4" value="option4"/>
+                                Terra, Marte e Júpiter
+                            </label>
+                            <label class="row align-items-center form-check-label" for="inlineRadio5">
+                                <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio5" value="option5"/>
+                                Céres, Éris e Tétis
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-around">
+                    <div data-dismiss="modal" data-toggle="modal" data-target="#window2" class="btn btn-info" onclick="mudarModal(false)">Prev</div>
+                    <div class="btn btn-success" onclick="showAnswer()">Ver Resposta</div>
+                    <div data-dismiss="modal" data-toggle="modal" data-target="#window3" class="btn btn-primary" onclick="mudarModal(true)">Next</div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- TERCEIRA JANELA =============================================================================================== -->
+    <div class="modal fade" id="window3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pergunta 2: Quais planetas possuem anéis?</h5>
+                    <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col">
+                        <form class="form-check">
+                            <label class="row align-items-center form-check-label" for="inlineRadio6">
+                                <input type="checkbox" class="form-check-input" name="inlineRadioOptions" id="inlineRadio6" value="option6" />
+                                Só Saturno
+                            </label>
+                            <label class="row align-items-center form-check-label" for="inlineRadio7">
+                                <input type="checkbox" class="form-check-input" name="inlineRadioOptions" id="inlineRadio7" value="option7" />
+                                Saturno e Júpiter
+                            </label>
+                            <label class="row align-items-center form-check-label" for="inlineRadio8">
+                                <input type="checkbox" class="form-check-input" name="inlineRadioOptions" id="inlineRadio8" value="option8" />
+                                Urano e Netuno
+                            </label>
+                            <label class="row align-items-center form-check-label" for="inlineRadio9">
+                                <input type="checkbox" class="form-check-input" name="inlineRadioOptions" id="inlineRadio9" value="option9" />
+                                As alternativas "A" e "C" estão corretas
+                            </label>
+                            <label class="row align-items-center form-check-label" for="inlineRadio10">
+                                <input type="checkbox" class="form-check-input" name="inlineRadioOptions" id="inlineRadio10" value="option10" />
+                                As alternativas "B" e "C" estão corretas
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <div data-dismiss="modal" data-toggle="modal" data-target="#window3" class="btn btn-info" onclick="mudarModal(false)">Prev</div>
+                    <div class="btn btn-success" onclick="showAnswer()">Ver Resposta</div>
+                    <div data-dismiss="modal" data-toggle="modal" data-target="#window4" class="btn btn-primary" onclick="mudarModal(true)">Next</div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- QUARTA JANELA =============================================================================================== -->
+    <div class="modal fade" id="window4">
+        <div id="modal2" class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pergunta 3: Quais são os planetas internos?</h5>
+                    <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col">
+                        <form class="form-check">
+                            <label class="row align-items-center form-check-label" for="inlineRadio11">
+                                <input type="radio" class="form-check-input" name="inlineRadioOptions" id="inlineRadio11" value="option11" />
+                                Terra, Saturno e Netuno
+                            </label>
+                            <label class="row align-items-center form-check-label" for="inlineRadio12">
+                                <input type="radio" class="form-check-input" name="inlineRadioOptions" id="inlineRadio12" value="option12" />
+                                Mercúrio, Vênus, Terra e Marte
+                            </label>
+                            <label class="row align-items-center form-check-label" for="inlineRadio13">
+                                <input type="radio" class="form-check-input" name="inlineRadioOptions" id="inlineRadio13" value="option13" />
+                                Terra, Júpiter, Urano e Mercúrio
+                            </label>
+                            <label class="row align-items-center form-check-label" for="inlineRadio14">
+                                <input type="radio" class="form-check-input" name="inlineRadioOptions" id="inlineRadio14" value="option14" />
+                                Ceres, Plutão, Saturno e Marte
+                            </label>
+                            <label class="row align-items-center form-check-label" for="inlineRadio15">
+                                <input type="radio" class="form-check-input" name="inlineRadioOptions" id="inlineRadio15" value="option15" />
+                                Apenas Terra e Vênus
+                            </label>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <div data-dismiss="modal" data-toggle="modal" data-target="#window4" class="btn btn-info" onclick="mudarModal(false)">Prev</div>
+                    <div class="btn btn-success" onclick="showAnswer()">Ver Resposta</div>
+                    <div data-dismiss="modal" data-toggle="modal" data-target="#window5" class="btn btn-primary" onclick="mudarModal(true)">Next</div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- QUINTA JANELA =============================================================================================== -->
+    <div class="modal fade" id="window5">
+        <div id="modal2" class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pergunta 4: Em termos de hidrografia e relevo, qual é o planeta mais parecido com o nosso?</h5>
+                    <button class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col">
+                        <form class="form-check">
+                            <label class="row align-items-center form-check-label" for="inlineRadio16">
+                                <input type="radio" class="form-check-input" name="inlineRadioOptions" id="inlineRadio16" value="option16"/>
+                                A Lua
+                            </label>
+                            <lable class="row align-items-center form-check-label" for="inlineRadioABA">
+                                <input type="radio" class="form-check-input" name="inlineRadioOptions" id="inlineRadioABA" value="option17"/>
+                                Marte
+                            </lable>
+                            <lable class="row align-items-center form-check-label" for="inlineRadioBUBU">
+                                <input type="radio" class="form-check-input" name="inlineRadioOptions" id="inlineRadioBUBU" value="option18"/>
+                                Vênus
+                            </lable>
+                            <lable class="row align-items-center form-check-label" for="inlineRadio19">
+                                <input type="radio" class="form-check-input" name="inlineRadioOptions" id="inlineRadio19" value="option19"/>
+                                Mercurio
+                            </lable>
+                            <lable class="row align-items-center form-check-label" for="inlineRadio20">
+                                <input type="radio" class="form-check-input" name="inlineRadioOptions" id="inlineRadio20" value="option20"/>
+                                Plutão
+                            </lable>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <div data-dismiss="modal" data-toggle="modal" data-target="#window5" class="btn btn-info" onclick="mudarModal(false)">Prev</div>
+                    <div class="btn btn-success" onclick="showAnswer()">Ver Resposta</div>
+                    <div data-dismiss="modal" data-toggle="modal" data-target="#window6" class="btn btn-primary" onclick="mudarModal(true)">Next</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
